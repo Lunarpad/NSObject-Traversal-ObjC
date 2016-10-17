@@ -21,13 +21,15 @@ For that reason we created a category on NSObject which adds support for setting
 
 you can do stuff like this:
 
-	id theValue = [aDictionary valueForRichKeyPath:@"key.0.subkey"];
+	id theValue = [dictionary valueForRichKeyPath:@"key.0.subkey"];
 
 and this:
 
-	[aDictionary setValue:anotherValue forAndHydrateRichKeyPath:@"key.0.subkey"];
+	[dictionary setValue:anotherValue forAndHydrateRichKeyPath:@"key.0.subkey"];
 
-Isn't that cool?
+Isn't that cool? 
+
+The above method `-setValue:forAndHydrateRichKeyPath:` will even fill in the necessary collection objects if necessary while traversing the key path, in order to be able to set the value at the leaf – much like `mkdir -p`. 
 
 
 ## Installation
