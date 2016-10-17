@@ -4,7 +4,7 @@
 
 Foundation and its support for Key-Value Coding is great for setting and getting values on NSDictionaries at a key path address like `key.subkey`. But KVC falls short when you need to reach into or through an NSArray which is embedded within a dictionary.
 
-For that reason we created a category on NSObject which adds support for setting and getting values at enhanced keypaths, so that if you have an MSMutableDictionary `dictionary` like this:
+For that reason we created a category on NSObject which adds support for setting and getting values at enhanced, "rich" keypaths, so that if you have an MSMutableDictionary `dictionary` like this:
 
 	NSMutableDictionary *dictionary = [NSMutableDictionary new];
 	{
